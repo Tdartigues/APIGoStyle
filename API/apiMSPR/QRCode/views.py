@@ -9,7 +9,7 @@ from .serializers import ReductionSerializer
 # Create your views here.
 class ReductionViewSet(ModelViewSet):
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
     serializer_class = ReductionSerializer
     queryset = Reduction.objects.all()
